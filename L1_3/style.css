@@ -1,0 +1,38 @@
+a{
+    color: black;
+    text-decoration: none;
+}
+a:hover{
+    color: blue;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.Hcontainer{
+    display: flex;
+    align-items: center;
+} 
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+}
+
+.upper{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    height: 30px;
+    width: 30px;
+    font-size: 20px;
+    
+}
