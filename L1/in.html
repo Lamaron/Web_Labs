@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Книги на заказ | Простой вайрфрейм</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.4;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .page {
+            border: 2px solid #333;
+            padding: 20px;
+            margin-bottom: 30px;
+            background: white;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 10px;
+        }
+        
+        .nav {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 15px 0;
+        }
+        
+        .nav a {
+            text-decoration: none;
+            color: #333;
+            padding: 5px 10px;
+            border: 1px solid #ccc;
+        }
+        
+        .box {
+            border: 1px solid #999;
+            padding: 15px;
+            margin: 10px 0;
+            background: #f9f9f9;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 8px 15px;
+            border: 1px solid #333;
+            background: #eee;
+            margin: 5px;
+            cursor: pointer;
+        }
+        
+        .list {
+            margin-left: 20px;
+        }
+        
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .item {
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+        
+        .form-input {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0 15px 0;
+            border: 1px solid #999;
+        }
+        
+        .label {
+            font-weight: bold;
+            display: block;
+            margin: 10px 0 5px 0;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            padding-top: 10px;
+            border-top: 1px solid #ccc;
+            font-size: 14px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+
+<div class="page">
+    <!-- Страница 1: Главная -->
+    <div class="header">
+        <h1>КНИГИ НА ЗАКАЗ</h1>
+        <div class="nav">
+            <a href="#">Главная</a>
+            <a href="#">Библиотека</a>
+            <a href="#">Редактор</a>
+            <a href="#">Персонажи</a>
+            <a href="#">Форум</a>
+            <a href="#">Печать</a>
+        </div>
+    </div>
+    
+    <div class="box">
+        <h2>О сервисе</h2>
+        <p>Публикация произведений, совместное написание книг, профессиональные инструменты для писателей, печать книг.</p>
+    </div>
+    
+    <div class="grid">
+        <div class="item">
+            <h3>Публикация</h3>
+            <p>Опубликуйте свою книгу онлайн</p>
+        </div>
+        <div class="item">
+            <h3>Совместное творчество</h3>
+            <p>Пишите книгу вместе с читателями</p>
+        </div>
+        <div class="item">
+            <h3>Инструменты</h3>
+            <p>Профессиональные инструменты для писателей</p>
+        </div>
+        <div class="item">
+            <h3>Печать</h3>
+            <p>Закажите печать вашей книги</p>
+        </div>
+    </div>
+    
+    <div style="text-align: center; margin: 20px 0;">
+        <span class="btn">Войти</span>
+        <span class="btn" style="background: #333; color: white;">Регистрация</span>
+    </div>
+</div>
+
+<div class="page">
+    <!-- Страница 2: Вход/Регистрация -->
+    <div class="header">
+        <h2>Вход в систему</h2>
+    </div>
+    
+    <div class="box">
+        <div class="label">Логин (email):</div>
+        <input type="text" class="form-input" placeholder="Введите email">
+        
+        <div class="label">Пароль:</div>
+        <input type="password" class="form-input" placeholder="Введите пароль">
+        
+        <div style="margin: 20px 0;">
+            <span class="btn" style="background: #333; color: white;">Войти</span>
+            <span class="btn">Забыли пароль?</span>
+        </div>
+        
+        <hr>
+        
+        <div class="label">Регистрация нового пользователя:</div>
+        <input type="text" class="form-input" placeholder="Имя пользователя">
+        <input type="text" class="form-input" placeholder="Email">
+        <input type="password" class="form-input" placeholder="Пароль">
+        
+        <div style="margin: 20px 0;">
+            <span class="btn" style="background: #333; color: white;">Зарегистрироваться</span>
+        </div>
+    </div>
+</div>
+
+<div class="page">
+    <!-- Страница 3: Личный кабинет -->
+    <div class="header">
+        <h2>Личный кабинет автора</h2>
+    </div>
+    
+    <div style="display: flex; gap: 20px;">
+        <div style="flex: 1;">
+            <div class="box">
+                <h3>Мои проекты</h3>
+                <ul class="list">
+                    <li>Книга 1 (черновик)</li>
+                    <li>Книга 2 (опубликована)</li>
+                    <li>Книга 3 (совместная)</li>
+                </ul>
+            </div>
+            
+            <div class="box">
+                <h3>Инструменты</h3>
+                <ul class="list">
+                    <li>Структура книги</li>
+                    <li>Персонажи</li>
+                    <li>Голосования</li>
+                    <li>Печать</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div style="flex: 2;">
+            <div class="box">
+                <h3>Мои книги</h3>
+                <div class="grid">
+                    <div class="item">
+                        <h4>Книга 1</h4>
+                        <p>Жанр: Фантастика</p>
+                        <p>Статус: Черновик</p>
+                        <span class="btn">Редактировать</span>
+                    </div>
+                    <div class="item">
+                        <h4>Книга 2</h4>
+                        <p>Жанр: Детектив</p>
+                        <p>Статус: Опубликована</p>
+                        <span class="btn">Просмотреть</span>
+                    </div>
+                    <div class="item">
+                        <h4>Книга 3</h4>
+                        <p>Жанр: Роман</p>
+                        <p>Статус: Совместная</p>
+                        <span class="btn">Участвовать</span>
+                    </div>
+                </div>
+                <div style="margin-top: 15px;">
+                    <span class="btn" style="background: #333; color: white;">+ Добавить книгу</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="page">
+    <!-- Страница 4: Редактор книги -->
+    <div class="header">
+        <h2>Редактор книги</h2>
+    </div>
+    
+    <div style="display: flex; gap: 20px;">
+        <div style="flex: 1;">
+            <div class="box">
+                <h3>Содержание</h3>
+                <ul class="list">
+                    <li>Глава 1 ✓</li>
+                    <li>Глава 2 ✎</li>
+                    <li>Глава 3 ○</li>
+                    <li>Глава 4 ○</li>
+                </ul>
+            </div>
+            
+            <div class="box">
+                <h3>Инструменты</h3>
+                <ul class="list">
+                    <li>Добавить главу</li>
+                    <li>Структура</li>
+                    <li>Персонажи</li>
+                    <li>Сохранить</li>
+                    <li>Опубликовать</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div style="flex: 3;">
+            <div class="box">
+                <h3>Глава 2: Начало</h3>
+                <textarea class="form-input" rows="10" placeholder="Текст главы...">
+Было холодное осеннее утро. Главный герой проснулся от странного звука...
+                </textarea>
+                
+                <div style="margin-top: 15px;">
+                    <span class="btn">Сохранить</span>
+                    <span class="btn">Предпросмотр</span>
+                    <span class="btn" style="background: #333; color: white;">Опубликовать главу</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ПРОСТАЯ СТРАНИЦА: Карточки персонажей -->
+<div class="page">
+    <div class="header">
+        <h2>Карточки персонажей</h2>
+    </div>
+    
+    <div class="box">
+        <div style="text-align: center; margin-bottom: 20px;">
+            <span class="btn" style="background: #333; color: white;">+ Добавить персонажа</span>
+        </div>
+        
+        <div class="item">
+            <h4>Алексей Логинов</h4>
+            <p><strong>Роль:</strong> Главный герой</p>
+            <p><strong>Возраст:</strong> 32 года</p>
+            <p><strong>Описание:</strong> Физик, создал машину времени</p>
+            <span class="btn">Редактировать</span>
+        </div>
+        
+        <div class="item">
+            <h4>Мария Соколова</h4>
+            <p><strong>Роль:</strong> Напарница</p>
+            <p><strong>Возраст:</strong> 28 лет</p>
+            <p><strong>Описание:</strong> Историк, исследователь</p>
+            <span class="btn">Редактировать</span>
+        </div>
+        
+        <div class="item">
+            <h4>Профессор Вольский</h4>
+            <p><strong>Роль:</strong> Наставник</p>
+            <p><strong>Возраст:</strong> 67 лет</p>
+            <p><strong>Описание:</strong> Профессор физики</p>
+            <span class="btn">Редактировать</span>
+        </div>
+    </div>
+</div>
+
+<div class="page">
+    <!-- Страница 5: Совместный проект -->
+    <div class="header">
+        <h2>Совместный проект: "Тайна старого дома"</h2>
+    </div>
+    
+    <div class="box">
+        <h3>Текущая глава</h3>
+        <p>Герои находятся на пороге старого дома. Что будет дальше?</p>
+        
+        <div class="label">Варианты развития сюжета:</div>
+        <div style="margin: 10px 0;">
+            <input type="radio" name="plot" id="plot1"> <label for="plot1">Герои заходят в дом</label><br>
+            <input type="radio" name="plot" id="plot2"> <label for="plot2">Герои уходят прочь</label><br>
+            <input type="radio" name="plot" id="plot3"> <label for="plot3">Герои вызывают помощь</label>
+        </div>
+        
+        <span class="btn">Проголосовать</span>
+        
+        <div style="margin-top: 20px;">
+            <div class="label">Комментарии читателей (3):</div>
+            <div class="box" style="margin: 10px 0;">
+                <p><strong>Читатель1:</strong> Лучше зайти в дом!</p>
+            </div>
+            <div class="box" style="margin: 10px 0;">
+                <p><strong>Читатель2:</strong> Слишком опасно, нужно уйти</p>
+            </div>
+            
+            <textarea class="form-input" rows="3" placeholder="Ваш комментарий..."></textarea>
+            <span class="btn" style="margin-top: 10px;">Отправить</span>
+        </div>
+    </div>
+</div>
+
+<!-- ПРОСТАЯ СТРАНИЦА: Форум обсуждений -->
+<div class="page">
+    <div class="header">
+        <h2>Форум обсуждений</h2>
+        <input type="text" class="form-input" placeholder="Поиск на форуме...">
+    </div>
+    
+    <div class="box">
+        <div style="text-align: center; margin-bottom: 20px;">
+            <span class="btn" style="background: #333; color: white;">+ Новая тема</span>
+            <span class="btn">Советы</span>
+            <span class="btn">Критика</span>
+            <span class="btn">Общее</span>
+        </div>
+        
+        <div class="item">
+            <h4>Как построить сюжет в детективе?</h4>
+            <p><strong>Автор:</strong> Анна_Писательница</p>
+            <p><strong>Сообщений:</strong> 47</p>
+            <span class="btn">Читать</span>
+        </div>
+        
+        <div class="item">
+            <h4>Ищу соавтора для фэнтези</h4>
+            <p><strong>Автор:</strong> Фантазер_89</p>
+            <p><strong>Сообщений:</strong> 23</p>
+            <span class="btn">Читать</span>
+        </div>
+        
+        <div class="item">
+            <h4>Рецензия на "Тайну старого дома"</h4>
+            <p><strong>Автор:</strong> Критик_Профи</p>
+            <p><strong>Сообщений:</strong> 56</p>
+            <span class="btn">Читать</span>
+        </div>
+        
+        <div style="text-align: center; margin-top: 20px;">
+            <span class="btn">1</span>
+            <span class="btn">2</span>
+            <span class="btn">3</span>
+            <span class="btn">→</span>
+        </div>
+    </div>
+</div>
+
+<div class="page">
+    <!-- Страница 6: Заказ печати -->
+    <div class="header">
+        <h2>Заказ печати книги</h2>
+    </div>
+    
+    <div class="box">
+        <div class="label">Выберите книгу:</div>
+        <select class="form-input">
+            <option>Книга 1: Фантастика</option>
+            <option>Книга 2: Детектив</option>
+            <option>Книга 3: Роман</option>
+        </select>
+        
+        <div class="label">Тираж:</div>
+        <input type="number" class="form-input" value="50" min="10" max="1000">
+        
+        <div class="label">Тип обложки:</div>
+        <div style="margin: 10px 0;">
+            <input type="radio" name="cover" id="soft"> <label for="soft">Мягкая (от 500₽)</label><br>
+            <input type="radio" name="cover" id="hard" checked> <label for="hard">Твёрдая (от 1200₽)</label><br>
+            <input type="radio" name="cover" id="premium"> <label for="premium">Подарочная (от 2000₽)</label>
+        </div>
+        
+        <div class="label">Дополнительные услуги:</div>
+        <div style="margin: 10px 0;">
+            <input type="checkbox" id="service1" checked> <label for="service1">Вёрстка для печати</label><br>
+            <input type="checkbox" id="service2"> <label for="service2">Иллюстрация обложки</label><br>
+            <input type="checkbox" id="service3"> <label for="service3">Корректура</label>
+        </div>
+        
+        <div style="margin: 20px 0; padding: 15px; border: 1px solid #333; background: #f0f0f0;">
+            <h3>Итого: ~ 2500₽</h3>
+            <p>(расчётная стоимость)</p>
+        </div>
+        
+        <div style="text-align: center;">
+            <span class="btn" style="background: #333; color: white; padding: 10px 30px;">Заказать печать</span>
+        </div>
+    </div>
+</div>
+
+<div class="page">
+    <!-- Страница 7: Библиотека -->
+    <div class="header">
+        <h2>Библиотека книг</h2>
+        <input type="text" class="form-input" placeholder="Поиск по названию, автору, жанру...">
+    </div>
+    
+    <div class="grid">
+        <div class="item">
+            <h4>Путешествие во времени</h4>
+            <p>Автор: Иван Петров</p>
+            <p>Жанр: Фантастика</p>
+            <span class="btn">Читать</span>
+        </div>
+        <div class="item">
+            <h4>Тайна старого дома</h4>
+            <p>Автор: Совместный проект</p>
+            <p>Жанр: Детектив</p>
+            <span class="btn">Читать</span>
+        </div>
+        <div class="item">
+            <h4>Стихи о любви</h4>
+            <p>Автор: Анна Сидорова</p>
+            <p>Жанр: Поэзия</p>
+            <span class="btn">Читать</span>
+        </div>
+        <div class="item">
+            <h4>История древнего мира</h4>
+            <p>Автор: Алексей К.</p>
+            <p>Жанр: История</p>
+            <span class="btn">Читать</span>
+        </div>
+    </div>
+    
+    <div style="text-align: center; margin-top: 20px;">
+        <span class="btn">1</span>
+        <span class="btn">2</span>
+        <span class="btn">3</span>
+        <span class="btn">→</span>
+    </div>
+</div>
+
+<div class="footer">
+    <p>Упрощённый вайрфрейм сайта "Книги на заказ" | 9 страниц</p>
+    <p>Лабораторная работа №1</p>
+</div>
+
+<script>
+    // Минимальная интерактивность для демонстрации
+    document.querySelectorAll('.btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+            if(this.textContent.includes('Войти') || 
+               this.textContent.includes('Зарегистрироваться') ||
+               this.textContent.includes('Добавить') ||
+               this.textContent.includes('Заказать') ||
+               this.textContent.includes('Новая тема') ||
+               this.textContent.includes('Редактировать') ||
+               this.textContent.includes('Читать')) {
+                alert('Вайрфрейм: Здесь будет соответствующая форма или действие');
+            }
+        });
+    });
+</script>
+
+</body>
+</html>
