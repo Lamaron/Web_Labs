@@ -1,8 +1,18 @@
 @import url('https://fonts.google.com/share?selection.family=Pacifico');
 
+:root {
+    --main-color: #325050;
+    --padding-base: 10px;
+}
+
 body{
-    background-color: #325050;
+    display: grid;
+    grid-template-rows: 1fr auto; 
+    min-height: 90vh;
+    background-image: url('../img/bg.jpg');
+    background-color: var(--main-color);
 }   
+
 
 .educ{
     display: flex;
@@ -33,11 +43,12 @@ label{
     display: grid;
     justify-content: center;
     align-items: center;
+    flex: 1 1 auto;
 }
 
 .form{
     display:flex;
-    margin: 40px 0;
+    margin: 20px 0;
     min-height: 50px;
 }
 
@@ -48,7 +59,9 @@ ol{
     height: 300px;
     font-size: 24px;
     min-height: 50px;
+    max-width: 601px;
     align-items: center;
+    justify-content: center;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     list-style: none; 
     margin: 0;        
@@ -56,11 +69,50 @@ ol{
     overflow-y: scroll;  
 }
 
-li{
+li {
     display: grid;
-    grid-template-columns: 30px auto 50px;
-    align-items: center;
+    grid-template-columns: 30px 1fr 50px;
+    align-items: start; 
     min-height: 50px;
+    max-height: 50px;
+    padding: 8px 5px;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    overflow: hidden;
+    width: 100%;
+    max-width: 100%;
+}
+
+.text {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.3;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+}
+
+.date {
+    font-size: 12px;
+    color: #666;
+    font-style: italic;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.date::before {
+    content: "📅";
+    font-size: 11px;
+    margin-right: 2px;
 }
 
 li:hover{
@@ -82,13 +134,48 @@ li:hover .cross_btn{
     border: 0px;
 }
 
-.cancel_button{
-    background-color: #A43434;
+.cancel_button {
+    background-color: #D8D8D8;
     border: 0px;
+    padding: 10px 20px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: color 0.35s ease;
+    cursor: pointer;
 }
+
+.cancel_button::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: #A43434;
+    transition: width 0.35s ease;
+    z-index: -1;
+}
+
+.cancel_button:hover{
+    color: #FFF;
+}
+
+.cancel_button:hover:after{
+    width: 100%;
+}
+
 #newTask{
     width: 400px;
+    margin: 0 4px 0 0;
+    border-radius: 5px;
+    transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
+
+#newTask:focus{
+    box-shadow: 0 0 0 4px #2f6e61;
+}
+
 
 li:has(input[type="checkbox"]:checked) {
     background-color: #878787;
@@ -142,6 +229,10 @@ li:has(input[type="checkbox"]:checked) .cross_btn::before {
     .add_button{
         height: 30px;
         width: 100%;
-        margin: 3px 0;
+        margin: 2px 0;
+    }
+
+    body {
+        background-image: url('../img/low_bg.jpg');
     }
 }
