@@ -134,7 +134,7 @@
 }
 
 .hedder-nav a:hover {
-    color: #3498db;
+    color: #c24e4e;
     transform: translateY(-2px);
     transition: all 0.3s ease;
 }
@@ -142,7 +142,7 @@
 .introdaction {
     height: 100vh;
     background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
-                url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJzl1Iqe-h_5wZP6DIQcGZIRjVJiissLorYQ&s');
+                url('https://images.wallpaperscraft.ru/image/single/gorod_vid_sverhu_doroga_156925_1920x1080.jpg');
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -150,6 +150,338 @@
     text-align: center;
     color: white;
     animation: zoomIn 1.5s ease;
+}
+
+.title-global{
+   font-size: 30px;
+   text-align: center;
+   margin: 3% 0 2% 0;
+   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.introdaction-title{
+   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+   font-size: 50px;
+}
+
+.introdaction-button{
+   background-color: #FF6B6B;
+   margin: 1% 0;
+   padding: 10px;
+   border-radius: 50px;
+}
+
+.introdaction-button:hover{
+   box-shadow: 0px 5px #6e2020;
+   background-color: #c24e4e;
+   transform: translateY(-2px);
+   transition: all 0.3s ease;
+   cursor: pointer;
+}
+
+.introdaction-button_text{
+   color: white;
+}
+/* "О нашем агентстве" */
+.info{
+   margin: 0 10%;
+}
+
+.info-block{
+   display: grid;
+   grid-template-columns: 50% 50%;
+   gap: 0 4%;
+}
+
+.info-block1{
+   display: grid;
+   row-gap: 10px;
+}
+
+.info-button{
+   background-color: #FF6B6B;
+   margin: 1% 0;
+   padding: 10px;
+   border-radius: 50px;
+   max-width: 250px;
+   max-height: 60px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.info-button:hover{
+   box-shadow: 0px 5px #6e2020;
+   background-color: #c24e4e;
+   transform: translateY(-2px);
+   transition: all 0.3s ease;
+   cursor: pointer;
+}
+
+.info-button_text{
+   color: white;
+}
+
+.info-block2-image{
+   width: 100%;
+   border-radius: 10px;
+}
+
+.info-text1, .info-text2{
+   margin: 5% 0 5% 0
+}
+
+.info-slogan{
+   font-size: 24px;
+   font-weight: bold;
+   color: #191616;
+}
+
+/* "Популярные направления" */
+.popular-container{
+   display: grid;
+   justify-content: center;
+   grid-template-columns: 25% 25% 25%;
+   gap: 0 3%;
+}
+
+.popular-container_card{
+   box-shadow: -1em 1em 0.4em rgb(226, 226, 222);
+   border-radius: 20px;
+   display: grid;
+   align-items: space-between;
+}
+
+.popular-container_card-img{
+   width: 100%;
+   border-radius: 20px 20px 0 0;
+   height: 80%;
+}
+
+.popular-container_card-lable{
+   font-size: 22px;
+   font-weight: bold;
+   color: #191616;
+   margin: -8% 4% 0 4%;
+}
+
+.popular-container_card-cost{
+   color: #666666;
+   font-size: 20px;
+   font-weight: bold;
+   margin: 5% 4%;
+}
+
+.popular-container_card-text{
+   margin: 1% 4%;
+}
+
+/* "Наши туры" */
+
+.tours-container{
+   display: grid;
+   grid-template-columns: 25% 25% 25%;
+   justify-content: center;
+   gap: 0 3%;
+}
+
+.tours-container_card-img{
+   width: 100%;
+   border-radius: 20px 20px 0 0;
+   height: 80%;
+}
+
+.tours-container_card{
+   box-shadow: -1em 1em 0.4em rgb(226, 226, 222);
+   border-radius: 20px;
+   display: grid;
+   grid-template-rows: 50% 10% 30% 10%;
+   padding: 0 0 10px 0;
+}
+
+.tours-container_card-title{
+   font-size: 22px;
+   font-weight: bold;
+   color: #191616;
+   margin: -10% 4% 0 4%;
+}
+
+.tours-container_card-text{
+   margin: 1% 4%;
+}
+
+.tours-container_card-pay{
+   padding: 5% 0;
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+}
+
+.tours-container_card-button{
+   background-color: #FF6B6B;
+   padding: 5px;
+   border-radius: 50px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   color: white;
+}
+
+.tours-container_card-button:hover{
+   box-shadow: 0px 5px #6e2020;
+   background-color: #c24e4e;
+   transform: translateY(-2px);
+   transition: all 0.3s ease;
+   cursor: pointer;
+}
+
+.tours-container_card-cost{
+   font-size: 20px;
+   color:#FF6B6B;
+   font-weight: bold;
+}
+
+/* "Отзывы от наших клиентов" */
+.review-container{
+   display: grid;
+   grid-template-columns: 25% 25% 25%;
+   justify-content: center;
+   gap: 0 3%;
+}
+
+.review-card{
+   background-color: #eef0f2;
+   display: grid;
+   border-radius: 10px;
+}
+
+.review-container-person{
+   display: flex;
+   margin: 4% 4%;
+}
+
+.review-container-person-img{
+   width: 15%;
+   border-radius: 50%;
+   margin: 0 5% 0 0;
+}
+
+.review-container-person-text-name{
+   font-size: 18px;
+   font-weight: bold;
+   color: #191616;
+}
+
+.review-container-person-text-tour{
+   font-size: 14px;
+}
+
+.review-container-text{
+   font-size: 14px;
+   margin: 3% 4%;
+   font-style: italic;
+}
+
+/* "Наши моменты" */
+.moments-container{
+   display: grid;
+   grid-template-columns: 15% 15% 15% 15%;
+   justify-content: center;
+   gap: 4% 1%;
+}
+
+.moments-container-img{
+   width: 100%;
+   height: 100%;
+   border-radius: 10px;
+}
+
+/* "Часто задаваемые вопросы" */
+.questions{
+   margin: 10% 0;
+   display: grid;
+   justify-content: center;
+   gap: 6% 0;
+}
+
+.questions-container{
+   background-color: #e8e9ea;
+   border-radius: 10px;
+   min-width: 600px;
+}
+
+.questions-container-card{
+   display: grid;
+   grid-template-columns: 95% 5%;
+   padding: 10px;
+}
+
+.questions-container-card-text{
+   font-size: 14px;
+
+}
+
+/* "Наши контакты" */
+
+.contacts-container{
+   display: grid;
+   grid-template-columns: 40% 40%;
+   justify-content: center;
+   margin: 4% 0;
+}
+
+.contatcts-container-sv{
+   margin: 4% 4%;
+   display:  grid;
+   justify-content: center;
+}
+
+.contacts-container-lable{
+   font-size: 24px;
+   font-weight: bold;
+   color: #191616;
+}
+
+.contacts-map{
+   width: 100%;
+}
+
+.contacts-container-button{
+   background-color: #FF6B6B;
+   margin: 10px 0;
+   padding: 10px;
+   border-radius: 50px;
+   color: white;
+   border: 0px;
+   margin: 0 5px 0 0;
+}
+
+.contacts-container-button:hover{
+   box-shadow: 0px 5px #6e2020;
+   background-color: #c24e4e;
+   transform: translateY(-2px);
+   transition: all 0.3s ease;
+   cursor: pointer;
+}
+
+/* "footer" */
+.footer{
+   display: grid;
+   justify-content:  center;
+   min-height: 150px;
+   background-color: #333333;
+}
+
+.footer-title{
+   font-size: 22px;
+   color: #FF6B6B;
+   text-align: center;
+   margin: 10% 0;
+}
+
+.footer-text{
+   font-size: 14px;
+   color: #cdd0d2;
 }
 
 @keyframes zoomIn {
