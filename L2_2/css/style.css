@@ -7,12 +7,18 @@
     text-decoration: none;
  }
 
+ html{
+   scroll-behavior: smooth;
+ }
+
  body{
     background-color: #F8F9FA;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     color: #333;
     overflow-x: hidden;
+    display: grid;
+   justify-content: center;
  }
  
  .slider {
@@ -252,6 +258,10 @@
    align-items: space-between;
 }
 
+.popular-container_card:hover{
+   animation: pulse 0.5s ease-in-out;
+}
+
 .popular-container_card-img{
    width: 100%;
    border-radius: 20px 20px 0 0;
@@ -342,7 +352,7 @@
 }
 
 /* "Отзывы от наших клиентов" */
-.review-container{
+.review-container{   
    display: grid;
    grid-template-columns: 25% 25% 25%;
    justify-content: center;
@@ -353,6 +363,11 @@
    background-color: #eef0f2;
    display: grid;
    border-radius: 10px;
+   transition: transform 0.3s ease;
+}
+
+.review-card:hover{
+   transform: scale(1.2);
 }
 
 .review-container-person{
@@ -361,8 +376,9 @@
 }
 
 .review-container-person-img{
-   width: 15%;
-   border-radius: 50%;
+   max-width: 60px;
+   max-height: 60px;
+   border-radius: 50px;
    margin: 0 5% 0 0;
 }
 
@@ -394,6 +410,11 @@
    width: 100%;
    height: 100%;
    border-radius: 10px;
+   transition: transform 0.3s ease;
+}
+
+.moments-container-img:hover{
+   transform: scale(1.1);
 }
 
 /* "Часто задаваемые вопросы" */
@@ -414,6 +435,11 @@
    display: grid;
    grid-template-columns: 95% 5%;
    padding: 10px;
+}
+
+.questions-container:hover{
+   background-color: #bac1c8;
+   cursor: pointer;
 }
 
 .questions-container-card-text{
@@ -494,3 +520,9 @@
         opacity: 1;
     }
 }
+
+@keyframes pulse {
+   0% { transform: scale(1); }
+   50% { transform: scale(1.03); }
+   100% { transform: scale(1); }
+ }
