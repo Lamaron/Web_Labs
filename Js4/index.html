@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>JavaScript Asinc</title>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🚀 JavaScript Задачи</h1>
+            <p>Таймеры, Промисы, Async/Await</p>
+        </div>
+        <div class="content">
+            <!-- Задача 1: Таймеры -->
+            <div class="task-section">
+                <h2>📋 Задача 1: Таймеры</h2>
+                <div class="counter-display" id="counterDisplay">Готов к запуску</div>
+                <div class="button-group">
+                    <button onclick="startCounter()">▶ Start</button>
+                    <button class="pause" onclick="pauseCounter()">⏸ Pause</button>
+                    <button class="stop" onclick="stopCounter()">⏹ Stop</button>
+                </div>
+                <div class="result-area" id="counterLog"></div>
+            </div>
+
+            <!-- Задача 2: Промисы -->
+            <div class="task-section">
+                <h2>🔮 Задача 2: Промисы</h2>
+                <div>
+                    <h3>Счётчик через delay()</h3>
+                    <div class="counter-display" id="promiseCounterDisplay">Готов к запуску</div>
+                    <div class="button-group">
+                        <button onclick="startPromiseCounter()">▶ Start Promise Counter</button>
+                        <button class="stop" onclick="stopPromiseCounter()">⏹ Stop</button>
+                    </div>
+                </div>
+                <div style="margin-top: 20px;">
+                    <h3>GitHub User Info</h3>
+                    <div class="github-input">
+                        <input type="text" id="githubUsername" placeholder="Введите GitHub username">
+                        <button onclick="getGithubUserInfo()">🔍 Найти</button>
+                    </div>
+                    <div class="loading" id="githubLoading">
+                        <div class="spinner"></div>
+                        <p>Загрузка...</p>
+                    </div>
+                    <div class="user-card" id="userCard">
+                        <img class="user-avatar" id="userAvatar" src="" alt="avatar">
+                        <div class="user-info">
+                            <h3 id="userName"></h3>
+                            <p id="userBio"></p>
+                            <p>📦 Репозиториев: <span id="userRepos"></span></p>
+                            <p>📍 <span id="userLocation"></span></p>
+                        </div>
+                    </div>
+                    <div class="repo-list" id="repoList"></div>
+                    <div class="error-message" id="githubError" style="display: none;"></div>
+                </div>
+            </div>
+
+            <!-- Задача 3: Async/Await -->
+            <div class="task-section">
+                <h2>⚡ Задача 3: Async/Await</h2>
+                <h3>Поиск GitHub пользователя (async/await)</h3>
+                <div class="github-input">
+                    <input type="text" id="asyncGithubUsername" placeholder="Введите GitHub username">
+                    <button onclick="getGithubUserAsync()">🔍 Найти (Async)</button>
+                </div>
+                <div class="loading" id="asyncGithubLoading">
+                    <div class="spinner"></div>
+                    <p>Загрузка...</p>
+                </div>
+                <div class="user-card" id="asyncUserCard">
+                    <img class="user-avatar" id="asyncUserAvatar" src="" alt="avatar">
+                    <div class="user-info">
+                        <h3 id="asyncUserName"></h3>
+                        <p id="asyncUserBio"></p>
+                        <p>📦 Репозиториев: <span id="asyncUserRepos"></span></p>
+                    </div>
+                </div>
+                <div class="repo-list" id="asyncRepoList"></div>
+                <div class="error-message" id="asyncGithubError" style="display: none;"></div>
+            </div>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
